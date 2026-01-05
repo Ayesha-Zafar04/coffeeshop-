@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- SIMPLE AppCompat theme - NO MaterialComponents -->
+    <style name="Theme.BeanBrew" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/primary_pink</item>
+        <item name="colorPrimaryDark">@color/dark_pink</item>
+        <item name="colorAccent">@color/light_pink</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/dark_pink</item>
+    </style>
+</resources>

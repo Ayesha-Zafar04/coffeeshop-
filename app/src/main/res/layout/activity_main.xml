@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <!-- Header with Profile and Logout buttons -->
+    <LinearLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF69B4"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="BeanBrew Coffee"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Logout"
+            android:backgroundTint="#FF4081"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <!-- Coffee Facts Section -->
+    <LinearLayout
+        android:id="@+id/factsSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/headerLayout"
+        android:background="#4CAF50"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="☕ Coffee Fact of the Day"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/coffeeFactText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Loading coffee facts..."
+            android:textColor="#E8F5E9"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <!-- YOUR COFFEE Section Header -->
+    <LinearLayout
+        android:id="@+id/yourCoffeeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/factsSection"
+        android:background="#FF69B4"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌟 YOUR COFFEE"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="(Add/Edit/Delete)"
+            android:textColor="#FFE4E9"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <!-- Your Coffee RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/yourCoffeeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourCoffeeHeader"
+        android:padding="10dp"/>
+
+    <!-- COFFEE DEALS Section Header -->
+    <LinearLayout
+        android:id="@+id/dealsHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourCoffeeRecyclerView"
+        android:background="#4CAF50"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 COFFEE DEALS"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="(Auto-loaded from API)"
+            android:textColor="#E8F5E9"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+    <!-- Coffee Deals RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dealsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealsHeader"
+        android:padding="10dp"/>
+
+    <!-- Empty State for Your Coffee -->
+    <LinearLayout
+        android:id="@+id/emptyYourCoffee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/yourCoffeeHeader"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No coffee added yet"
+            android:textColor="#FF69B4"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tap + button to add your first coffee"
+            android:textColor="#FFB6C1"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+    <!-- Empty State for Deals -->
+    <LinearLayout
+        android:id="@+id/emptyDeals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dealsHeader"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading coffee deals..."
+            android:textColor="#4CAF50"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:indeterminateTint="#4CAF50"/>
+
+    </LinearLayout>
+
+    <!-- Add Coffee Button -->
+    <ImageButton
+        android:id="@+id/fabAddCoffee"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:background="#4CAF50"
+        android:src="@drawable/ic_add"
+        android:tint="#FFFFFF"
+        android:elevation="8dp"/>
+
+    <!-- Developer name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:text="Developed by Ayesha Zafar"
+        android:textColor="#4CAF50"
+        android:textSize="12sp"/>
+
+</RelativeLayout>

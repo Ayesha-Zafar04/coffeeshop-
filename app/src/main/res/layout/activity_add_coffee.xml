@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/gradient_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cofee_logo"/>
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="30dp"
+            android:text="Add New Coffee"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"/>
+
+        <!-- Simple EditText for Coffee Name -->
+        <EditText
+            android:id="@+id/coffeeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Coffee Name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FF018786"
+            android:backgroundTint="#4CAF50"
+            android:padding="15dp"/>
+
+        <!-- Simple EditText for Price -->
+        <EditText
+            android:id="@+id/coffeePrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Price ($)"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FF018786"
+            android:backgroundTint="#4CAF50"
+            android:padding="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Category"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+
+        <!-- Simple RadioGroup for Category Selection -->
+        <RadioGroup
+            android:id="@+id/categoryRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/btnHot"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hot"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FFFFFF"/>
+
+            <RadioButton
+                android:id="@+id/btnIced"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Iced"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FFFFFF"/>
+
+            <RadioButton
+                android:id="@+id/btnSpecial"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Special"
+                android:textColor="#FFFFFF"
+                android:buttonTint="#FFFFFF"/>
+
+        </RadioGroup>
+
+        <!-- Simple EditText for Description -->
+        <EditText
+            android:id="@+id/coffeeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="top"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FF018786"
+            android:backgroundTint="#4CAF50"
+            android:padding="15dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#FF69B4"
+                android:text="Save Coffee"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:backgroundTint="#4CAF50"
+                android:text="Update"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#FF4081"
+            android:text="Delete Coffee"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:backgroundTint="#FFFFFF"
+            android:text="Back to Menu"
+            android:textColor="#FF69B4"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="Developed by Ayesha Zafar"
+            android:textColor="#FF018786"
+            android:textSize="13sp"/>
+
+    </LinearLayout>
+
+</ScrollView>
